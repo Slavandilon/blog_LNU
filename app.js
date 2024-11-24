@@ -19,7 +19,8 @@ const methodOverride = require("method-override"); // для перезапис�
 app.use(methodOverride("_method"));
 
 // підключаємо додаткові файли
-app.use(express.static('assets'));
+//app.use(express.static('assets'));
+app.use(express.static(path.join(__dirname, "assets")));
 
 // кажем, що використовуємо шаблонізатор ejs
 app.set("views", path.join(__dirname, "views"));
