@@ -1,0 +1,42 @@
+<!-- Підключаємо спільні для всіх сторінок блоки  -->
+<%- include('./partials/header.ejs') %>
+
+    <div class="container">
+        <h1 class="pb-3 mb-5 border-bottom text-center">
+            Додати пост
+        </h1>
+
+        <!-- ФОРМА -->
+        <!-- action="" - де опрацьовуємо запрос, тут - прям тут -->
+
+        <form class="mt-3" method="post" action="">
+            <div class="mb-3">
+                <label for="title" class="form-label">Назва поста</label>
+                <input type="text" class="form-control" id="title" name="title" placeholder="Назва"
+                       autocomplete="off" required>
+                <!-- тут name має точно відповідати тому, що написано в postModel -->
+                <!-- autocomplete приберає підказки-автозаповнення -->
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Опис поста</label>
+                <textarea class="form-control" id="description" name="description" minlength="10"></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="author" class="form-label">Автор</label>
+                <input type="text" class="form-control" id="author" name="author"
+                       placeholder="Прізвище" autocomplete="off" required>
+            </div>
+            <!-- і тут name має точно відповідати тому, що написано в postModel -->
+
+
+            <button type="submit" class="btn btn-primary">Створити</button>
+        </form>
+
+        <p class="pt-3 mt-5 border-top">
+            Чистий макет підвищує креативність і полегшує експерименти з типографікою, кольорами та інтервалами.
+        </p>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>

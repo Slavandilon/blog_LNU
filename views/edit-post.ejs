@@ -1,0 +1,37 @@
+<%- include('./partials/header.ejs') %>
+
+    <div class="container">
+
+        <h1 class="pb-3 mb-5 border-bottom">
+            <%= title %>
+        </h1>
+
+        <form method="post" action="/edit-post/<%= post.id %>?_method=PUT"> <!-- Тут робимо Пут-->
+            <div class="mb-3">
+                <label for="title" class="form-label">Назва поста</label>
+                <input type="text" class="form-control" id="title" name="title"
+                       value="<%= post.title %>" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Опис поста</label>
+                <textarea class="form-control" id="description"
+                          name="description" rows="8"><%= post.description %></textarea>
+            </div>
+
+            <div class="mb-3">
+                <label for="author" class="form-label">Автор</label>
+                <input type="text" class="form-control" id="author" name="author"
+                       value="<%= post.author %>" required>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Редагувати</button>
+        </form>
+
+        <p class="pt-3 mt-5 border-top">
+            Типографіка є центральною для ефективного дизайну, суттєво впливаючи на сприйняття вмісту.
+            Ця практика спрощує процес проектування та допомагає зацікавленим сторонам уявити потенціал проекту.
+        </p>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>

@@ -1,0 +1,57 @@
+<%- include('./partials/header.ejs') %>
+
+<div class="container">
+
+    <h1 class="pb-3 mb-5 border-bottom">
+        <%= title %>
+    </h1>
+
+    <p class="lead">
+        Веб-додаток, що використовує JS і Node.js&Express.js, де користувачі можуть створювати публікації.
+    </p>
+
+    <h2>Node.js</h2>
+
+    <p>
+        Node.js, асинхронне подієве середовище виконання JavaScript, створене будувати масштабовані мережеві застосунки.
+    </p>
+
+    <h3>Обробка статичних файлів в Express</h3>
+
+    <p>
+        Для обробки статичних файлів, таких як зображення, CSS файли, та JavaScript файли, 
+        використовуй вбудовану у Express функцію <code>express.static</code>.
+    </p>
+    <p>
+        Передайте ім’я директорії яка містить статичні файли у <code>express.static</code> 
+        щоб розпочати отримувати їх напряму. Наприклад, використовуйте цей код для того, 
+        щоб обробляти статичні файли у директорії <code>public</code>: <br>
+        <code>app.use(express.static('public'));</code>
+    </p>
+
+    <div class="card text-bg-light mt-4 mb-5">        
+        <h3 class="card-header">Приклад виводу "Привіт, Express!"</h3>
+        <div class="card-body">
+            <pre><code>const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+    res.send('Привіт, Express!')
+})
+
+app.listen(3000, () => {
+    console.log('Приклад застосунку, який прослуховує 3000-ий порт!')
+})</code></pre>
+        </div>
+    </div>
+
+    <h2>Node&Express.js та MongoDB&Mongoose</h2>
+
+    <p>
+        Тестування дизайну з фіктивним текстом дозволяє завчасно виявити потенційні проблеми, 
+        уможливлюючи своєчасне коригування, що покращує зручність використання та доступність, 
+        що зрештою призводить до більш досконалого кінцевого продукту.
+    </p>
+</div>
+
+<%- include('./partials/footer.ejs') %>

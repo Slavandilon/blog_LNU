@@ -1,0 +1,15 @@
+.navbar.fixed-top + * {
+    padding-block: 62px 10px;
+}
+
+main .container {
+    max-width: 600px;
+    padding-block: 100px;
+}
+
+/* кнопка */
+.bi {
+    display: inline-block;
+    vertical-align: -.125em;
+    fill: currentcolor;
+}
